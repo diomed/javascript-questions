@@ -17,6 +17,8 @@
 <style>{background-image: url(https://marcbruederlin.github.io/comet/img/pattern.png)}
 
 body {
+    font-family: "Twemoji Country Flags", "Helvetica", Tahoma, serif;
+
   --sb-track-color: #f5f5f5;
   --sb-thumb-color: #6BAF8D;
   --sb-size: 10px;
@@ -37,7 +39,6 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 10px;
-  
   }
 </style>
 </head>
@@ -69,7 +70,10 @@ body::-webkit-scrollbar-thumb {
 
   <!-- Required -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-
+<script type="module" defer>
+  import { polyfillCountryFlagEmojis } from "https://cdn.skypack.dev/country-flag-emoji-polyfill";
+  polyfillCountryFlagEmojis();
+</script>
   <!-- Recommended -->
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
